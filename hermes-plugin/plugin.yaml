@@ -1,0 +1,25 @@
+name: chroller
+version: 0.1.0
+description: Control attached tabs in the signed-in Chrome profile through the local Chroller companion.
+author: Chroller
+manifest_version: 2
+license: MIT
+provides_tools:
+  - chroller_status
+  - chroller_tabs
+  - chroller_navigate
+  - chroller_read
+  - chroller_collect
+  - chroller_snapshot
+  - chroller_screenshot
+  - chroller_click
+  - chroller_type
+  - chroller_press
+  - chroller_scroll
+  - chroller_fill
+  - chroller_evaluate
+config_schema:
+  companion_url:
+    type: str
+    default: "http://127.0.0.1:8765"
+    description: "Local Chroller companion. Only loopback addresses are accepted."

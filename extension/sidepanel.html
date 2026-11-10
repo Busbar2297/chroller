@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Chroller</title>
+  <link rel="stylesheet" href="sidepanel.css">
+</head>
+<body>
+  <header>
+    <div>
+      <p class="eyebrow">Local bridge</p>
+      <h1>Chroller</h1>
+    </div>
+    <span id="status" class="status">Offline</span>
+  </header>
+
+  <section>
+    <label for="token">Pairing token</label>
+    <div class="row">
+      <input id="token" type="text" autocomplete="off" spellcheck="false" placeholder="Paste only the token">
+      <button id="save" type="button">Save</button>
+    </div>
+    <p id="connection-error" class="hint"></p>
+  </section>
+
+  <section class="arm-row">
+    <div>
+      <h2>Control</h2>
+      <p class="hint">Armed tabs can be driven. Nothing else is touched.</p>
+    </div>
+    <button id="arm" type="button" class="arm" aria-pressed="false">Off</button>
+  </section>
+
+  <section>
+    <div class="row head">
+      <h2>Tabs</h2>
+      <button id="refresh" type="button" class="quiet">Refresh</button>
+    </div>
+    <ul id="tabs"></ul>
+  </section>
+
+  <script src="sidepanel.js"></script>
+</body>
+</html>

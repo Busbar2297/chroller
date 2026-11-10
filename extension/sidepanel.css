@@ -1,0 +1,117 @@
+:root {
+  color-scheme: dark;
+  --bg: #1c1915;
+  --panel: #26211c;
+  --ink: #f4efe6;
+  --muted: #b3a89a;
+  --line: #3d352c;
+  --amber: #e2a84a;
+  --amber-ink: #2a1d08;
+  --ok: #8fce7a;
+  --bad: #e07a68;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 14px/1.4 "Segoe UI", sans-serif;
+}
+
+header, section {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--line);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--amber);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1, h2 { margin: 0; font-weight: 600; }
+h1 { font-size: 20px; }
+h2 { font-size: 14px; }
+
+.status {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 4px 10px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.status.ok { color: var(--ok); border-color: #3f5c36; }
+.status.bad { color: var(--bad); border-color: #6a3a32; }
+
+label { display: block; margin-bottom: 6px; color: var(--muted); font-size: 12px; }
+
+.row { display: flex; gap: 8px; align-items: center; }
+.row.head { justify-content: space-between; margin-bottom: 8px; }
+
+input {
+  flex: 1;
+  min-width: 0;
+  background: var(--panel);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 8px 10px;
+}
+
+button {
+  background: var(--amber);
+  color: var(--amber-ink);
+  border: 0;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button.quiet {
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid var(--line);
+}
+
+.hint { margin: 8px 0 0; color: var(--muted); font-size: 12px; }
+.hint.error { color: var(--bad); }
+
+.arm-row { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+
+.arm {
+  min-width: 64px;
+  background: #3a332c;
+  color: var(--ink);
+}
+
+.arm.on { background: var(--ok); color: #14210f; }
+
+ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+
+li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px;
+  align-items: start;
+  background: var(--panel);
+  border-radius: 8px;
+  padding: 8px;
+}
+
+li span { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+li .url { color: var(--muted); font-size: 12px; }
+li.empty { display: block; color: var(--muted); background: transparent; padding: 0; }

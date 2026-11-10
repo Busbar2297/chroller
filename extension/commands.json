@@ -1,0 +1,15 @@
+[
+  {"name": "chroller_status", "required": [], "route": "query"},
+  {"name": "chroller_tabs", "required": [], "route": "query"},
+  {"name": "chroller_navigate", "required": ["url"], "route": "query"},
+  {"name": "chroller_read", "required": [], "route": "query"},
+  {"name": "chroller_collect", "required": [], "route": "query"},
+  {"name": "chroller_snapshot", "required": ["tab_id"], "route": "query"},
+  {"name": "chroller_screenshot", "required": ["tab_id"], "route": "query"},
+  {"name": "chroller_click", "required": ["tab_id", "ref"], "route": "input"},
+  {"name": "chroller_type", "required": ["tab_id", "ref", "text"], "route": "input"},
+  {"name": "chroller_press", "required": ["tab_id", "key"], "route": "input"},
+  {"name": "chroller_scroll", "required": ["tab_id"], "route": "input"},
+  {"name": "chroller_fill", "required": ["tab_id", "fields"], "route": "input", "default_method": "dom"},
+  {"name": "chroller_evaluate", "required": ["tab_id", "expression"], "route": "input"}
+]
